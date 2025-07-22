@@ -1,7 +1,88 @@
-# =======================================
-# Drupal 10 Composer Project Git Ignore
-# =======================================
+# ================================================
+# Drupal 10 - Composer-Based Project .gitignore
+# ================================================
 
-# Ignore Drupal core
+# =====================================
+# Core project files
+# =====================================
+/vendor/
+composer.lock
+/web/core/
 
-.settings.php
+# =====================================
+# Ignore contrib modules/themes/profiles
+# =====================================
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+
+# =====================================
+# Ignore site files
+# =====================================
+web/sites/*/files/
+!web/sites/default/files/.gitkeep
+
+# =====================================
+# Ignore sensitive config and local overrides
+# =====================================
+web/sites/*/settings*.php
+!web/sites/default/settings.php
+web/sites/*/services*.yml
+web/sites/*/settings.local.php
+web/sites/*/development.services.yml
+
+# =====================================
+# Config directories (if stored outside web root)
+# =====================================
+/config/
+/sync/
+/private/
+/backup/
+/tmp/
+/drush/backups/
+/drush/sites/
+
+# =====================================
+# Ignore compiled or build assets
+# =====================================
+**/node_modules/
+**/bower_components/
+**/package-lock.json
+**/yarn.lock
+**/gulpfile.js
+**/webpack.config.js
+
+# =====================================
+# Ignore IDE/project system files
+# =====================================
+*.sublime-*
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+*.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+nbproject/
+
+# =====================================
+# Ignore test output and coverage
+# =====================================
+/phpunit.xml
+/htmlcov/
+coverage.xml
+/sites/simpletest
+
+# =====================================
+# Ignore compressed/exported files
+# =====================================
+*.orig
+*.sql
+*.sqlite
+*.tar
+*.gz
+*.zip
+*.tgz
+*.patch
