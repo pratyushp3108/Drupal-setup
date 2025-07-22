@@ -4,4 +4,4 @@
 
 # Ignore Drupal core
 
-web/sites/default/settings.php
+.settings.php
