@@ -8,6 +8,8 @@ composer.lock
 
 # Ignore Drupal core
 /web/core/
+web/sites/*/settings*.php
+web/sites/default/settings.php
 
 # Ignore contrib modules/themes
 /web/modules/contrib/
